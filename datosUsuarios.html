@@ -8,13 +8,58 @@
 <body>
     <form action="#" method="POST">
         <input type="hidden" name="id" value="1">
-        <br>
+        <br><br>
+        <fieldset>
+            <legend>Datos Empleado</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" oninput="document.getElementById('nombreCompleto').value = this.value + ' ' + document.getElementById('apellidos').value">
+            <br><br>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" oninput="document.getElementById('nombreCompleto').value = document.getElementById('nombre').value + ' ' + this.value">
+            <br><br>
+            <label for="nombreCompleto">Nombre Completo:</label>
+            <output id="nombreCompleto" name="nombreCompleto"></output>
+            <br><br>
+            <label for="tipoEmpleado">Tipo Empleado:</label>
+            <input list="tiposEmpleado" id="tipoEmpleado" name="tipoEmpleado">
+            <datalist id="tiposEmpleado">
+                <option value="Interno">
+                <option value="Externo">
+            </datalist>
+            <br><br>
+            <label for="carnet">Carnet:</label>
+            <input type="radio" id="carnet0" name="carnet" value="0"> Sin Carnet
+            <input type="radio" id="carnet1" name="carnet" value="1"> B2
+            <input type="radio" id="carnet2" name="carnet" value="2"> Otros
+            <br><br>
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+            <br><br>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono">
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <br><br>
+            <label for="homepage">Añadir página:</label>
+            <input type="url" id="homepage" name="homepage">
+            <br><br>
+            <label for="fichero">Documento DNI:</label>
+            <input type="file" id="fichero" name="fichero">
+        </fieldset>
+        <br><br>
         <fieldset>
             <legend>Datos Usuario</legend>
+            <label for="codEmpleado">Código de empleado:</label>
+            <input type="text" id="codEmpleado" name="codEmpleado" value="COD001" readonly>
+            <br><br>
             <label for="username">Username:</label>
             <input type="text" id="username" name="username">
+            <br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
         </fieldset>
-        <br>
+        <br><br>
         <fieldset>
             <legend>Datos Contratación</legend>
             <label for="puesto">Puesto:</label>
@@ -24,20 +69,43 @@
                 <option value="3">Jefe Proyecto</option>
                 <option value="4">Gerente</option>
             </select>
+            <br><br>
+            <label for="mesContratacion">Mes contrato:</label>
+            <input type="month" id="mesContratacion" name="mesContratacion">
+            <br><br>
+            <label for="salario">Salario:</label>
+            <input type="range" id="salario" name="salario" min="0" max="60000" step="1000" value="25000" oninput="document.getElementById('lsalario').value = this.value">
+            <output id="lsalario">25000</output>
         </fieldset>
+        <br><br>
         <fieldset>
             <legend>Perfil</legend>
             <label for="perfil">Perfil:</label>
             <select id="perfil" name="perfil">
-                <option value="1">Administrados BB.DD.</option>
-                <option value="2">Desarrolador Front-End</option>
+                <option value="1">Administrador BB.DD.</option>
+                <option value="2">Desarrollador Front-End</option>
                 <option value="3">Desarrollador Java</option>
-                <option value="4">Desarrollador NET</option>
+                <option value="3">Desarrollador NET</option>
             </select>
         </fieldset>
-        <br>
-        <button type="reset">Limpiar</button>
-        <button type="submit">Enviar</button>
+        <br><br>
+        <fieldset>
+            <legend>Configuración Aplicación</legend>
+            <label for="favcolor">Select color para su perfil:</label>
+            <input type="color" id="favcolor" name="favcolor">
+            <br><br>
+            <label for="busqueda">Búsqueda:</label>
+            <input type="search" id="busqueda" name="busqueda">
+        </fieldset>
+        <br><br>
+        <label for="comentario">Comentario:</label>
+        <br><br>
+        <textarea id="comentario" name="comentario" rows="4" cols="50"></textarea>
+        <br><br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar">
     </form>
 </body>
 </html>
+
+ 
