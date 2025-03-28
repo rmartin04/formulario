@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Formulario Basico</title>
+        </head>
+        <body>
+            <form id="myForm" action= "#" method="get" >
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name = "nombre"></input><br><br>
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name = "apellidos"></input><br><br>
+                <label for="f_nacimiemto">Fecha Nacimiento:</label>
+                <input type="date" id="f_nacimiemto" name = "f_nacimiemto"></input><br><br>
+                <label for="color">Color Favorito:</label>
+                <input type="color" id="color" name = "color"></input><br><br>
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" name = "dni" pattern="[0-9]{8}[A-Z]"></input><br><br>
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name = "edad"></input><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name = "password"></input><br><br>
+                <label for="foto">Foto:</label>
+                <input type="file" id="foto" name = "foto"></input><br><br>
+
+                <select name="provincia" id="provincia">
+                    <option value="28">Madrid</option>
+                    <option value="45">Toledo</option>
+                </select><br>
+
+
+
+
+                <button type="reset">Limpiar</button>
+                <button type="submit">Enviar</button>
+
+            </form>
+        </body>
+        </html>

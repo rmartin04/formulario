@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario en HTML5</title>
+</head>
+<body>
+    <form action="#" method="POST">
+        <input type="hidden" name="id" value="1">
+        <br>
+        <fieldset>
+            <legend>Datos Usuario</legend>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Datos Contratación</legend>
+            <label for="puesto">Puesto:</label>
+            <select id="puesto" name="puesto">
+                <option value="1">Desarrollador</option>
+                <option value="2">Analista</option>
+                <option value="3">Jefe Proyecto</option>
+                <option value="4">Gerente</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Perfil</legend>
+            <label for="perfil">Perfil:</label>
+            <select id="perfil" name="perfil">
+                <option value="1">Administrados BB.DD.</option>
+                <option value="2">Desarrolador Front-End</option>
+                <option value="3">Desarrollador Java</option>
+                <option value="4">Desarrollador NET</option>
+            </select>
+        </fieldset>
+        <br>
+        <button type="reset">Limpiar</button>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
